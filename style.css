@@ -1,0 +1,84 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+body .upper-bar {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65vw;
+  height: 8vh;
+  transition: 0.5s;
+}
+body .upper-bar .btn-table {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1;
+  color: white;
+  font-family: Montserrat;
+  font-size: calc(16px + 0.3vh);
+}
+body .upper-bar .btn-table .btn {
+  cursor: pointer;
+  position: relative;
+}
+body .upper-bar .btn-table .btn::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: white;
+  margin: 0;
+  transform: scaleX(0);
+  display: inline-block;
+  transition: 0.3s;
+}
+body .upper-bar .btn-table .btn:hover::after {
+  transform: scaleX(1);
+}
+body .main {
+  height: 100vh;
+  width: 100%;
+  background: red;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url("tło.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+body .main h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: calc(25px + 10vh);
+  margin: 0;
+}
+body .main p {
+  margin: 0;
+  font-size: calc(15px + 2vh);
+  font-family: Montserrat;
+  letter-spacing: 5px;
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+body .main2 {
+  height: 100vh;
+  width: 100%;
+}
+
+.scrolled {
+  background: rgba(52, 152, 219, 0.8);
+}/*# sourceMappingURL=style.css.map */
