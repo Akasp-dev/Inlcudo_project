@@ -11,3 +11,10 @@ document.addEventListener("scroll", ()=>{
         navbar.style.height = "8vh";
     }
 });
+
+document.querySelectorAll(".btn").forEach(e => {
+    e.onclick = () =>{
+        let name = "." + e.innerHTML;
+        document.querySelector(name).scrollIntoView({block: "end", behavior: "smooth"});
+    }
+}); 

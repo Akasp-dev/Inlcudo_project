@@ -4,6 +4,7 @@ body{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    scroll-behavior: smooth !important;
     .upper-bar{
         position: fixed;
         display: flex;
@@ -71,9 +72,25 @@ body{
             text-underline-offset: 10px;
         }
     }
-    .main2{
+    .Produkty, .Szkolenia{
         height: 100vh;
         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: Montserrat;
+        h1{
+            font-size: 60px;
+            margin: 0;
+        }
+        p{
+            margin: 0;
+        }
+    }
+    .Szkolenia{
+        background: black;
+        color: white;
     }
 }
 
