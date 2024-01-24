@@ -6,10 +6,14 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   scroll-behavior: smooth !important;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 body .upper-bar {
   position: fixed;
   display: flex;
+  z-index: 99;
   justify-content: center;
   align-items: center;
   width: 65vw;
@@ -41,12 +45,14 @@ body .upper-bar .btn-table .btn::after {
   transform: scaleX(0);
   display: inline-block;
   transition: 0.3s;
+  border-radius: 15px;
 }
 body .upper-bar .btn-table .btn:hover::after {
   transform: scaleX(1);
 }
 body .main {
   height: 100vh;
+  position: relative;
   width: 100%;
   background: red;
   background-size: cover;
@@ -75,7 +81,24 @@ body .main p {
   text-decoration: underline;
   text-underline-offset: 10px;
 }
-body .Produkty, body .Szkolenia, body .Kontakt {
+body .main .scroll-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(10px + 2vw);
+  height: calc(10px + 2vw);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 20%;
+  border: white solid 2px;
+  color: white;
+  transition: 0.4s;
+  cursor: pointer;
+}
+body .main .scroll-btn:hover {
+  background: white;
+}
+body .section {
   height: 100vh;
   width: 100%;
   display: flex;
@@ -84,18 +107,18 @@ body .Produkty, body .Szkolenia, body .Kontakt {
   flex-direction: column;
   font-family: Montserrat;
 }
-body .Produkty h1, body .Szkolenia h1, body .Kontakt h1 {
+body .section h1 {
   font-size: 60px;
   margin: 0;
 }
-body .Produkty p, body .Szkolenia p, body .Kontakt p {
+body .section p {
   margin: 0;
 }
-body .Szkolenia {
+body .Szkolenia, body .O_nas, body .Content {
   background: black;
   color: white;
 }
 
 .scrolled {
-  background: rgba(52, 152, 219, 0.8);
+  background: rgba(0, 0, 0, 0.8);
 }/*# sourceMappingURL=style.css.map */

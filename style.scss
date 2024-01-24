@@ -5,9 +5,11 @@ body{
     justify-content: center;
     flex-wrap: wrap;
     scroll-behavior: smooth !important;
+    user-select: none;
     .upper-bar{
         position: fixed;
         display: flex;
+        z-index: 99;
         justify-content: center;
         align-items: center;
         width: 65vw;
@@ -37,6 +39,7 @@ body{
                     transform: scaleX(0);
                     display: inline-block;
                     transition: .3s;
+                    border-radius: 15px;
                 }
                 &:hover::after{
                     transform: scaleX(1);
@@ -46,6 +49,7 @@ body{
     }
     .main{
         height: 100vh;
+        position: relative;
         width: 100%;
         background: red;
         background-size: cover;
@@ -71,8 +75,25 @@ body{
             text-decoration: underline;
             text-underline-offset: 10px;
         }
+        .scroll-btn{       
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            width: calc(10px + 2vw); 
+            height: calc(10px + 2vw);
+            border-radius: 50%;
+            position: absolute;
+            bottom: 20%;
+            border: white solid 2px;
+            color: white;
+            transition: .4s;
+            cursor: pointer;
+            &:hover{
+                background: white;
+            }
+        }
     }
-    .Produkty, .Szkolenia, .Kontakt{
+    .section{
         height: 100vh;
         width: 100%;
         display: flex;
@@ -88,7 +109,7 @@ body{
             margin: 0;
         }
     }
-    .Szkolenia{
+    .Szkolenia, .O_nas, .Content{
         background: black;
         color: white;
     }
@@ -96,5 +117,5 @@ body{
 
 //Klasy pomocnicze
 .scrolled{
-    background: rgba($color: #3498db, $alpha: .8);
+    background: rgba($color: /*#3498db*/#000000, $alpha: .8);
 }

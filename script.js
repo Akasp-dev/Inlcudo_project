@@ -4,17 +4,15 @@ document.addEventListener("scroll", ()=>{
     if(window.scrollY > sectionHeight/3){
         navbar.classList.add("scrolled");
         navbar.style.width = "100vw";
-        navbar.style.height = "5vh";
+        navbar.style.height = "8vh";
     }else{
         navbar.classList.remove("scrolled");
         navbar.style.width = "65vw";
-        navbar.style.height = "8vh";
+        navbar.style.height = "10vh";
     }
 });
 
-document.querySelectorAll(".btn").forEach(e => {
-    e.onclick = () =>{
-        let name = "." + e.innerHTML;
-        document.querySelector(name).scrollIntoView({block: "end", behavior: "smooth"});
-    }
-}); 
+const buttons = Array.from(document.querySelectorAll(".btn"));
+const sections = Array.from(document.querySelectorAll(".section"));
+
+buttons.forEach(e => e.onclick = () => sections[buttons.indexOf(e)].scrollIntoView({block: "end", behavior: "smooth"})); 
