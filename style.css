@@ -118,6 +118,51 @@ body .Szkolenia, body .O_nas, body .Content {
   background: black;
   color: white;
 }
+body .Szkolenia {
+  background-image: url("tło2.png");
+  background-attachment: fixed;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+}
+body .Szkolenia .sidebar {
+  height: 100%;
+  width: 40%;
+  background-image: linear-gradient(to bottom right, #3498db, #0984e3);
+  background-attachment: fixed;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  border: 2px 0 white solid;
+  box-shadow: inset 0px 0px 15px 0px #064778;
+}
+body .Szkolenia .sidebar h1 {
+  color: white;
+  font-family: Montserrat;
+  font-size: calc(16px + 1vw);
+  padding: calc(10px + 1vw);
+}
+body .Szkolenia .sidebar ul {
+  letter-spacing: 2px;
+}
+body .Szkolenia .sidebar ul li {
+  margin-bottom: 1.5rem;
+}
+body .Szkolenia .sidebar .oferty {
+  border: white solid 2px;
+  padding: 2%;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+body .Szkolenia .sidebar .oferty:hover {
+  background: white;
+  color: black;
+}
 
 .scrolled {
   background: rgba(0, 0, 0, 0.8);
