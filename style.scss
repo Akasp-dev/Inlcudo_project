@@ -6,47 +6,6 @@ body{
     flex-wrap: wrap;
     scroll-behavior: smooth !important;
     user-select: none;
-    .upper-bar{
-        position: fixed;
-        display: flex;
-        z-index: 99;
-        justify-content: center;
-        align-items: center;
-        width: 65vw;
-        height: 8vh;
-        transition: .5s;
-        .btn-table{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex: 1;
-            color: white;
-            font-family: Montserrat;
-            font-size: calc(16px + 0.3vh);
-            
-            .btn{
-                cursor: pointer;
-                position: relative;
-                &::after{
-                    content: "";
-                    position: absolute;
-                    bottom: -1px;
-                    left: 0;
-                    height: 2px;
-                    width: 100%;
-                    background: white;
-                    margin: 0;
-                    transform: scaleX(0);
-                    display: inline-block;
-                    transition: .3s;
-                    border-radius: 15px;
-                }
-                &:hover::after{
-                    transform: scaleX(1);
-                }
-            }
-        }
-    }
     .main{
         height: 100vh;
         position: relative;
@@ -60,6 +19,67 @@ body{
         align-items: center;
         flex-direction: column;
         user-select: none;
+        .scroll-up{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            position: fixed;
+            cursor: pointer;
+            border: 3px solid white;
+            top: 5%;
+            height: 6vh;
+            width: 6vh;
+            border-radius: 50%;
+            transition: .3s;
+            &:hover{
+                background: white;
+                color: black;
+            }
+        }
+        .upper-bar{
+            position: absolute;
+            top: 0;
+            display: flex;
+            z-index: 99;
+            justify-content: center;
+            align-items: center;
+            border-radius: 25px;
+            width: 65vw;
+            height: 8vh;
+            transition: .5s;
+            .btn-table{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex: 1;
+                color: white;
+                font-family: Montserrat;
+                font-size: calc(16px + 0.3vh);
+                
+                .btn{
+                    cursor: pointer;
+                    position: relative;
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        bottom: -1px;
+                        left: 0;
+                        height: 2px;
+                        width: 100%;
+                        background: white;
+                        margin: 0;
+                        transform: scaleX(0);
+                        display: inline-block;
+                        transition: .3s;
+                        border-radius: 15px;
+                    }
+                    &:hover::after{
+                        transform: scaleX(1);
+                    }
+                }
+            }
+        }
         h1{
             font-family: Arial, Helvetica, sans-serif;
             color: white;
@@ -125,43 +145,59 @@ body{
         .sidebar{
             height: 100%;
             width: 40%;
-            background-image: linear-gradient(to bottom right, #3498db, #0984e3);
-            background-attachment: fixed;
+            background-image: url("sidebar_bg-v2.png"); 
+            background-size: cover;
             display: flex;
             justify-content: flex-start;
             align-items: center;
             flex-direction: column;
-            //border-radius: 25px 0 0 25px;
             border: 2px 0 white solid;
-            box-shadow: inset 0px 0px 15px 0px  #064778;
+            box-shadow: inset 0px 0px 15px 0px  #042b49;
+            padding: 0 3%;
             h1{
-                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 font-family: Montserrat;
                 font-size: calc(16px + 1vw);
-                padding: calc(10px + 1vw)
+                height: 20%;
             }
-            ul{
-                letter-spacing: 2px;
-                li{
-                    margin-bottom: 1.5rem;
+            .zakres{
+                //background: red;
+                height: 60%;
+                p{
+                    margin: 1% 0 1% 0;
+                    font-size: calc(18px + 3%);
                 }
             }
             .oferty{
-                border: white solid 2px;
-                padding: 2%;
-                border-radius: 25px;
-                cursor: pointer;
-                transition: .3s;
-                &:hover{
-                    background: white;
-                    color: black;
+                width: 100%;
+                height: 20%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .offer-btn{
+                    border: white 2px solid;
+                    width: 20%;
+                    border-radius: 25px;
+                    transition: .3s;
+                    padding: 3%;
+                    &:hover{
+                        cursor: pointer;
+                        background: white;
+                        color: black;
+                    }
                 }
             }
         }
+        }
     }
-}
 
 //Klasy pomocnicze
+.unscrolled{
+    visibility: hidden;
+    opacity: 0;
+}
 .scrolled{
-    background: rgba($color: /*#3498db*/#000000, $alpha: .8);
+    opacity: 1;
 }

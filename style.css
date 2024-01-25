@@ -10,46 +10,6 @@ body {
      -moz-user-select: none;
           user-select: none;
 }
-body .upper-bar {
-  position: fixed;
-  display: flex;
-  z-index: 99;
-  justify-content: center;
-  align-items: center;
-  width: 65vw;
-  height: 8vh;
-  transition: 0.5s;
-}
-body .upper-bar .btn-table {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex: 1;
-  color: white;
-  font-family: Montserrat;
-  font-size: calc(16px + 0.3vh);
-}
-body .upper-bar .btn-table .btn {
-  cursor: pointer;
-  position: relative;
-}
-body .upper-bar .btn-table .btn::after {
-  content: "";
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  height: 2px;
-  width: 100%;
-  background: white;
-  margin: 0;
-  transform: scaleX(0);
-  display: inline-block;
-  transition: 0.3s;
-  border-radius: 15px;
-}
-body .upper-bar .btn-table .btn:hover::after {
-  transform: scaleX(1);
-}
 body .main {
   height: 100vh;
   position: relative;
@@ -65,6 +25,66 @@ body .main {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+}
+body .main .scroll-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: fixed;
+  cursor: pointer;
+  border: 3px solid white;
+  top: 5%;
+  height: 6vh;
+  width: 6vh;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+body .main .scroll-up:hover {
+  background: white;
+  color: black;
+}
+body .main .upper-bar {
+  position: absolute;
+  top: 0;
+  display: flex;
+  z-index: 99;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  width: 65vw;
+  height: 8vh;
+  transition: 0.5s;
+}
+body .main .upper-bar .btn-table {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1;
+  color: white;
+  font-family: Montserrat;
+  font-size: calc(16px + 0.3vh);
+}
+body .main .upper-bar .btn-table .btn {
+  cursor: pointer;
+  position: relative;
+}
+body .main .upper-bar .btn-table .btn::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: white;
+  margin: 0;
+  transform: scaleX(0);
+  display: inline-block;
+  transition: 0.3s;
+  border-radius: 15px;
+}
+body .main .upper-bar .btn-table .btn:hover::after {
+  transform: scaleX(1);
 }
 body .main h1 {
   font-family: Arial, Helvetica, sans-serif;
@@ -131,39 +151,56 @@ body .Szkolenia {
 body .Szkolenia .sidebar {
   height: 100%;
   width: 40%;
-  background-image: linear-gradient(to bottom right, #3498db, #0984e3);
-  background-attachment: fixed;
+  background-image: url("sidebar_bg-v2.png");
+  background-size: cover;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   border: 2px 0 white solid;
-  box-shadow: inset 0px 0px 15px 0px #064778;
+  box-shadow: inset 0px 0px 15px 0px #042b49;
+  padding: 0 3%;
 }
 body .Szkolenia .sidebar h1 {
-  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: Montserrat;
   font-size: calc(16px + 1vw);
-  padding: calc(10px + 1vw);
+  height: 20%;
 }
-body .Szkolenia .sidebar ul {
-  letter-spacing: 2px;
+body .Szkolenia .sidebar .zakres {
+  height: 60%;
 }
-body .Szkolenia .sidebar ul li {
-  margin-bottom: 1.5rem;
+body .Szkolenia .sidebar .zakres p {
+  margin: 1% 0 1% 0;
+  font-size: calc(18px + 3%);
 }
 body .Szkolenia .sidebar .oferty {
-  border: white solid 2px;
-  padding: 2%;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: 0.3s;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-body .Szkolenia .sidebar .oferty:hover {
+body .Szkolenia .sidebar .oferty .offer-btn {
+  border: white 2px solid;
+  width: 20%;
+  border-radius: 25px;
+  transition: 0.3s;
+  padding: 3%;
+}
+body .Szkolenia .sidebar .oferty .offer-btn:hover {
+  cursor: pointer;
   background: white;
   color: black;
 }
 
+.unscrolled {
+  visibility: hidden;
+  opacity: 0;
+}
+
 .scrolled {
-  background: rgba(0, 0, 0, 0.8);
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */

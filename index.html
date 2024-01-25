@@ -8,17 +8,18 @@
     <title>Includo</title>
 </head>
 <body> 
-    <!---<div class="upper-bar">
-        <div class="btn-table">
-            <a class="btn" alt="Produkty">Produkty</a>
-            <a class="btn" alt="Szkolenia">Szkolenia</a>
-            <a class="btn" alt="Kontakt">Kontakt</a>
-            <a class="btn" alt="O nas">O nas</a>
-            <a class="btn" alt="Blog">Blog</a>
-            <a class="btn" alt="Zawartość do pobrania">Zawartość do pobrania</a>
-        </div>
-    </div> -->
     <div class="main">
+        <div class="scroll-up" onclick="document.querySelector('.main').scrollIntoView({behavior: 'smooth'})"><i class="fa-solid fa-arrow-up"></i></div>
+        <div class="upper-bar">
+            <div class="btn-table">
+                <a class="btn" alt="Produkty">Produkty</a>
+                <a class="btn" alt="Szkolenia">Szkolenia</a>
+                <a class="btn" alt="Kontakt">Kontakt</a>
+                <a class="btn" alt="O nas">O nas</a>
+                <a class="btn" alt="Blog">Blog</a>
+                <a class="btn" alt="Zawartość do pobrania">Zawartość do pobrania</a>
+            </div>
+        </div> 
         <h1>Includo</h1>
         <p>Komunikacja i niezależność</p>
     </div>  
@@ -28,18 +29,18 @@
     </div>
     <div class="Szkolenia section">
         <div class="sidebar">
-            <h1>Prowadzimy szkolenia w zakresie: </h1>
-            <ul>
-                <li>Proste i zaawansowane technologie wspomagające</li>
-                <li>Technologie informacyjno-komunikacyjne w edukacji</li>
-                <li>Technologie rehabilitacyjne</li>
-                <li>Adaptacje materiałów edukacyjnych</li>
-                <li>Integracja technologii z programami nauczania</li>
-                <li>Niepełnosprawności sensoryczne, ruchowe, intelektualne, emocjonalne</li>
-                <li>Komunikacja alternatywna</li>
-            </ul>
+            <h1>Prowadzimy szkolenia w zakresie | Our training includes:</h1>
+            <div class="zakres">
+                <p>• Proste i zaawansowane technologie wspomagające | Low to high tech assistive technologies</p>
+                <p>• Technologie informacyjno-komunikacyjne w edukacji | Information and communication technology in education</p>
+                <p>• Technologie rehabilitacyjne | Rehabilitation technology</p>
+                <p>• Adaptacje materiałów edukacyjnych | Learning material adaptations</p>
+                <p>• Integracja technologii z programami nauczania | Integrating technology with a curriculum</p>
+                <p>• Niepełnosprawności sensoryczne, ruchowe, intelektualne, emocjonalne | Sensory, physical, intellectual, emotional disabilities</p>
+                <p>• Komunikacja alternatywna | AAC</p>
+            </div>
             <div class="oferty">
-                Oferty szkoleń
+                <div class="offer-btn">Nasze oferty</div>
             </div>
         </div>
     </div>
