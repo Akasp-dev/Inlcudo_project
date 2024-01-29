@@ -12,6 +12,10 @@ document.addEventListener("scroll", ()=>{
     }
 });
 
+window.onresize = () =>{
+    document.querySelector(".zakres").style.fontSize = window.innerWidth / 3;
+};
+
 const buttons = Array.from(document.querySelectorAll(".btn"));
 const sections = Array.from(document.querySelectorAll(".section"));
 
