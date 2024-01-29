@@ -173,8 +173,8 @@ body .Produkty .sidebar .offer-btn {
 }
 body .Produkty .sidebar .offer-btn:hover {
   cursor: pointer;
-  background: white;
-  color: black;
+  background: black;
+  color: white;
 }
 body .Szkolenia {
   background-image: url("tło2.png");
