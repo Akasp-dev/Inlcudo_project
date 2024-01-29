@@ -162,6 +162,7 @@ body .Produkty .sidebar h1 {
 }
 body .Produkty .sidebar p {
   font-size: 1, 5vw;
+  letter-spacing: 2px;
 }
 body .Produkty .sidebar .offer-btn {
   border: black 2px solid;
